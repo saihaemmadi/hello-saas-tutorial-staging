@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@magnolia/react-editor": "1.4.0",
+    "current-git-branch": "^1.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^5.1.2",

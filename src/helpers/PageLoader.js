@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import config from "../magnolia.config";
 import { getAPIBase } from "./AppHelpers";
 
@@ -8,6 +9,7 @@ import { EditorContextHelper } from "@magnolia/react-editor";
 import { magnoliaFetch } from "./Api";
 
 const PageLoader = () => {
+  const location = useLocation();
   const [pageState, setPageState] = useState({
     loading: false,
     content: null,
@@ -97,7 +99,7 @@ const PageLoader = () => {
     window.addEventListener("message", handler);
 
     loadPage(false);
-  }, [])
+  }, [location]);
 
   if (pageState.loading) {
     return <p>Loading...</p>;
